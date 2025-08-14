@@ -53,7 +53,7 @@ Sets up networking, IAM, etc.
 
 Helm chart for your application:
 
-'''text
+```text
 helm/
   └── my-app/
       ├── Chart.yaml
@@ -61,27 +61,27 @@ helm/
       └── templates/
           ├── deployment.yaml
           └── service.yaml
-'''
+```
 
 You’ll use separate values files per environment:
 
-'''text
+```text
 helm-values/
   ├── dev-values.yaml
   ├── test-values.yaml
   └── prod-values.yaml
-'''
+```
 
 Step 3: Create Argo CD App Manifests
 
 These define how Argo CD will deploy your app in each environment.
 
-'''text
+```text
 argo-apps/
   ├── dev-app.yaml
   ├── test-app.yaml
   └── prod-app.yaml
-'''
+```
 # Step 4: CI/CD Pipeline
 
 You can use GitHub Actions, GitLab CI, or similar. Here’s a rough flow:
@@ -100,7 +100,7 @@ On changes to helm-values/*.yaml or Helm chart → Argo CD syncs automatically
 
 # Git Repo Structure Example
 
-'''text
+```text
 your-repo/
 ├── infra/
 │   ├── dev/
@@ -119,7 +119,7 @@ your-repo/
 └── .github/
     └── workflows/
         └── ci.yml
-'''
+```
 
 # 🔐 GCP Permissions
 
