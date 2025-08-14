@@ -29,14 +29,7 @@ Pipeline Breakdown
 
 Each environment can be represented by its own Terraform workspace or directory:
 
-''' infra/
-  ├── dev/
-  │   └── main.tf
-  ├── test/
-  │   └── main.tf
-  └── prod/
-      └── main.tf
-'''
+<pre lang="markdown"> ```bash infra/ ├── dev/ │ └── main.tf ├── test/ │ └── main.tf └── prod/ └── main.tf ``` </pre>
 Each main.tf:
 
 Creates a GKE cluster (or shared cluster with separate namespaces)
