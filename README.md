@@ -37,7 +37,6 @@ infra/
   └── prod/
       └── main.tf
 
-
 Each main.tf:
 
 Creates a GKE cluster (or shared cluster with separate namespaces)
